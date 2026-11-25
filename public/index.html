@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bluewater Bay Charters | Fishing Trips</title>
+  <meta name="description" content="Half-day, full-day and sunset fishing charters with Captain Sam Reid. Request your trip online.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="logo">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 20c4 0 4-3 8-3s4 3 8 3 4-3 8-3v5c-4 0-4 3-8 3s-4-3-8-3-4 3-8 3z"/><path d="M15 4v12h-6z"/><path d="M17 6l7 10h-7z"/></svg>
+        Bluewater Bay Charters
+      </a>
+      <nav>
+        <a href="#trips">Trips</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#book" class="btn btn-small">Book</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Fishing charters from Bluewater Bay Marina</p>
+        <h1>Your best day on the water starts here</h1>
+        <p class="lead">Small groups, all gear supplied, and a captain who knows where the fish are. Families, first-timers and serious anglers welcome.</p>
+        <div class="hero-actions">
+          <a href="#trips" class="btn">See our trips</a>
+          <a href="#book" class="btn btn-ghost">Request a booking</a>
+        </div>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 40c120 20 240 30 360 20S600 20 720 20s240 30 360 30 240-20 360-30v60H0z"/>
+      </svg>
+    </section>
+
+    <section id="trips" class="section">
+      <div class="container">
+        <h2>Our trips</h2>
+        <p class="section-intro">Prices are for the whole boat, not per person. Rods, tackle, bait and licences are included.</p>
+        <div id="trip-list" class="trip-grid">
+          <p class="muted">Loading trips…</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-sand">
+      <div class="container about">
+        <div>
+          <h2>Meet Captain Sam</h2>
+          <p>Sam Reid has fished these waters for over 20 years and has run Bluewater Bay Charters since 2012. Expect patient help for beginners, local know-how for experienced anglers, and plenty of good stories.</p>
+          <p>Our boat, <strong>Salt Dancer</strong>, is a 32-foot sportfisher with a shaded deck, onboard toilet and full safety gear. She is surveyed and inspected every year.</p>
+        </div>
+        <div class="card bring">
+          <h3>What to bring</h3>
+          <ul>
+            <li>Hat, sunglasses and sunscreen</li>
+            <li>A light jacket, as it's cooler on the water</li>
+            <li>Food and drinks (no glass, please)</li>
+            <li>A bag or esky to take your catch home</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container narrow">
+        <h2>Frequently asked questions</h2>
+        <details>
+          <summary>Do I need any fishing experience?</summary>
+          <p>Not at all. We show you everything, from baiting a hook to landing your fish.</p>
+        </details>
+        <details>
+          <summary>What if the weather is bad?</summary>
+          <p>Safety comes first. If conditions aren't safe, we'll call you the day before to move your trip or give you a full refund.</p>
+        </details>
+        <details>
+          <summary>Can children come?</summary>
+          <p>Yes, kids aged 5 and up are welcome. We carry child-size life jackets.</p>
+        </details>
+        <details>
+          <summary>How do I pay?</summary>
+          <p>Once we confirm your trip by phone or email, we'll arrange a 30% deposit. The balance is paid on the day.</p>
+        </details>
+        <details>
+          <summary>Can we keep our fish?</summary>
+          <p>Yes, within legal size and bag limits. We'll clean and fillet your catch at the end of the trip.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="book" class="section section-sea">
+      <div class="container narrow">
+        <h2>Request a booking</h2>
+        <p class="section-intro">Send us your preferred trip and date. We'll confirm availability within 24 hours. Nothing is charged now.</p>
+
+        <form id="booking-form" class="card form" novalidate>
+          <div class="field">
+            <label for="tripId">Trip</label>
+            <select id="tripId" name="tripId" required>
+              <option value="">Choose a trip</option>
+            </select>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="date">Preferred date</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <div class="field">
+              <label for="guests">Number of guests</label>
+              <input type="number" id="guests" name="guests" min="1" max="6" value="2" required>
+              <small id="guests-hint" class="muted"></small>
+            </div>
+          </div>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="notes">Anything we should know? <span class="muted">(optional)</span></label>
+            <textarea id="notes" name="notes" rows="3" maxlength="1000" placeholder="e.g. two kids aged 8 and 10, celebrating a birthday"></textarea>
+          </div>
+          <p id="form-error" class="form-error" role="alert" hidden></p>
+          <button type="submit" class="btn btn-full">Send booking request</button>
+        </form>
+
+        <div id="form-success" class="card success" hidden>
+          <h3>Thanks, your request is in!</h3>
+          <p>We'll be in touch within 24 hours to confirm your trip. If it's urgent, call us on <a href="tel:+15550142">(555) 0142</a>.</p>
+          <button type="button" id="another" class="btn btn-ghost-dark">Make another request</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Bluewater Bay Charters</strong><br>
+        Berth 14, Bluewater Bay Marina
+      </div>
+      <div>
+        <a href="tel:+15550142">(555) 0142</a><br>
+        <a href="mailto:hello@bluewaterbaycharters.com">hello@bluewaterbaycharters.com</a>
+      </div>
+      <div class="muted">&copy; <span id="year"></span> Bluewater Bay Charters</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

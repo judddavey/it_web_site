@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Booking Requests | Bluewater Bay Charters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 20c4 0 4-3 8-3s4 3 8 3 4-3 8-3v5c-4 0-4 3-8 3s-4-3-8-3-4 3-8 3z"/><path d="M15 4v12h-6z"/><path d="M17 6l7 10h-7z"/></svg>
+        Admin
+      </a>
+      <nav>
+        <button type="button" id="refresh" class="btn btn-small">Refresh</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container admin-main">
+    <div class="admin-top">
+      <h2 style="margin:0">Booking requests</h2>
+      <div class="filters" id="filters">
+        <button type="button" class="filter active" data-status="All">All</button>
+        <button type="button" class="filter" data-status="New">New</button>
+        <button type="button" class="filter" data-status="Confirmed">Confirmed</button>
+        <button type="button" class="filter" data-status="Declined">Declined</button>
+      </div>
+    </div>
+    <div id="booking-list" class="booking-list">
+      <p class="empty">Loading…</p>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
